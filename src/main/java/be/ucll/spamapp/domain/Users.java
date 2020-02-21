@@ -2,29 +2,29 @@ package be.ucll.spamapp.domain;
 
 import java.util.ArrayList;
 
-public class Persons {
+public class Users {
 
-    private ArrayList<Person> persons = new ArrayList<>();
+    private ArrayList<Person> users = new ArrayList<>();
 
-    public Persons(){
+    public Users(){
 
     }
 
     public void setPersons(ArrayList<Person> persons) {
-        this.persons = persons;
+        this.users = persons;
     }
 
     public ArrayList<Person> getPersons() {
-        return persons;
+        return users;
     }
 
     public void addPerson(Person person){
-        persons.add(person);
+        users.add(person);
     }
 
     public Person removeNextPerson(Person person){
-        return persons.remove(0);
+        return users.remove(0);
     }
 
-    
+
 }

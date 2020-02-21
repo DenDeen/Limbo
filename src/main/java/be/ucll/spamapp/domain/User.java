@@ -1,13 +1,12 @@
 package be.ucll.spamapp.domain;
 
-public class Person {
-
+public abstract class User {
     private String name;
     private String firstName;
     private int age;
     boolean isZombie;
 
-    public Person(String name, String firstName, int age, boolean isZombie) {
+    public User(String name, String firstName, int age, boolean isZombie) {
         setAge(age);
         setFirstName(firstName);
         setName(name);
