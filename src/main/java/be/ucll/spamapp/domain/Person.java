@@ -8,7 +8,10 @@ public class Person {
     boolean isZombie;
 
     public Person(String name, String firstName, int age, boolean isZombie) {
-        
+        setAge(age);
+        setFirstName(firstName);
+        setName(name);
+        setZombie(isZombie);
     }
 
 
