@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Rating</th>
+    </tr>
+    <tr th:each="resto : ${restaurants}">
+        <td th:text="${resto.name}">1</td>
+        <td th:text="${resto.address}"></td>
+        <td th:text="${resto.rating}"></td>
+    </tr>
+</table>
+</body>
+</html>
