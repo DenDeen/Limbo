@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @ComponentScan
 @Controller
-public class RestaurantController {
+public class IndexController {
 
     @Autowired
     private Restaurants restaurants;
-    public RestaurantController(){
+    public IndexController(){
 
     }
 
     @GetMapping("/")
     public String printRestaurants(Model model) {
         model.addAttribute("restaurants", restaurants.getRestaurants());
-        return "restaurants";
+        return "index";
     }
 }
 
