@@ -23,20 +23,26 @@ public class HomepageController {
 
     @GetMapping("/homepage")
     public String load(Model model, @CookieValue(value = "email") String email) {
-        model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
         model.addAttribute("user", Facade.getPotentiele(email).get(0));
-        System.out.println(email);
+        model.addAttribute("nextUser", Facade.getPotentiele(email).get(1));
+
         model.addAttribute("email", email);
         return "homepage";
     }
 
-    @GetMapping("/newcard")
-    public String newCard(Model model, @CookieValue(value = "email") String email){
-        model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
-        model.addAttribute("user", Facade.getPotentiele(email).get(0));
-        System.out.println(email);
-        model.addAttribute("email", email);
-        return "homepage";
+    @GetMapping("/swipe")
+    public String swipe(Model model, @CookieValue(value = "email") String email, @RequestParam(value="direction") String direction){
+        try{
+            model.addAttribute("user", Facade.swipe(email, -1));
+            model.addAttribute("nextUser", Facade.getPotentiele(email).get(1));
+            model.addAttribute("email", email);
+            return "homepage";
+        }
+        catch (Exception e){
+            return "homepage";
+        }
+
+
     }
 
 
