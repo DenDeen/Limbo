@@ -1,20 +1,26 @@
 package be.ucll.spamapp.domain;
 
+import java.time.LocalDate;
+
 public class Zombie extends User {
 
-    private String date;
+    private LocalDate date;
 
-    public Zombie(String name, String firstName, int age, boolean isZombie, String date) {
+    public Zombie(String name, String firstName, int age, LocalDate date) {
 
-        super(name, firstName, age, isZombie);
+        super(name, firstName, age);
         setDate(date);
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public int calculateDays(){
+        return 2;
     }
 }
