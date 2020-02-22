@@ -1,7 +1,9 @@
 package be.ucll.spamapp.domain;
 
-import java.util.ArrayList;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+@Service
 public class Users {
 
     private ArrayList<User> users = new ArrayList<>();

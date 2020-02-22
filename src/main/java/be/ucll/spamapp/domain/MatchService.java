@@ -1,14 +1,16 @@
 package be.ucll.spamapp.domain;
 
 import org.assertj.core.internal.bytebuddy.implementation.bytecode.Throw;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class MatchService {
     private ArrayList<User> matches;
-
-    MatchService(){
-
+    private User currentuser;
+    public MatchService(){
+        matches = new ArrayList<>();
     }
 
     public void addMatch(User user){
@@ -21,6 +23,18 @@ public class MatchService {
                 matches.remove(u);
             }
         }
+    }
+
+    public void setMatches(ArrayList<User> matches) {
+        this.matches = matches;
+    }
+
+    public User getCurrentuser() {
+        return currentuser;
+    }
+
+    public void setCurrentuser(User currentuser) {
+        this.currentuser = currentuser;
     }
 
     public ArrayList<User> getMatches(){
