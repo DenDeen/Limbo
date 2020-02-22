@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Name</th>
+
+        <th>Bio</th>
+        <th>picture</th>
+    </tr>
+    <tr th:each="match : ${matches}">
+        <td th:text="${match.firstName}">1</td>
+        <td th:text="${match.name}"></td>
+        <td th:text="${match.bio}"></td>
+        <td th:text="${match.mainPhotoPath}"></td>
+    </tr>
+</table>
+</body>
+</html>
