@@ -2,6 +2,7 @@ package be.ucll.spamapp.domain;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,6 +15,10 @@ public abstract class User {
     private int age;
     private String email;
     private boolean woman;
+    private String orientation;
+    private List<Defect> defects;
+    private Preferences preferences;
+
     private PotService potService;
     private MatchService matchService;
     private Users users;
@@ -42,6 +47,14 @@ public abstract class User {
     @Override
     public int hashCode() {
         return Objects.hash(mainPhotoPath, photoPaths, name, firstName, age, email, woman, potService, matchService, users);
+    }
+
+    public List<String> getAllPhotoPaths()
+    {
+        List<String> dum = new ArrayList<>();
+        dum.add(this.getMainPhotoPath());
+        dum.addAll(this.getPhotoPaths());
+        return dum;
     }
 
     public Users getUsers() {
