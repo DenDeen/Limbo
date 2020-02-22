@@ -98,4 +98,8 @@ public class Facade {
         }
         return null;
     }
+
+    public static User getUser(String email){
+        return Users.getInstance().getUser(email);
+    }
 }
