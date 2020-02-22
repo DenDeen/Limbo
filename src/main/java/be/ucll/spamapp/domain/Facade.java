@@ -16,7 +16,7 @@ public class Facade {
 
 
 
-    private static User swipe(String email, int keuze)
+    public static User swipe(String email, int keuze)
     {
         for(User dum:allUsers.getPersons())
         {
