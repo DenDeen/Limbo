@@ -1,6 +1,11 @@
 package be.ucll.spamapp.domain;
 
+import java.util.List;
+
 public abstract class User {
+    private int id;
+    private String mainPhotoPath;
+    private List<String> photoPaths;
     private String name;
     private String firstName;
     private int age;
@@ -15,12 +20,39 @@ public abstract class User {
         this.woman = woman;
     }
 
-    public User(String name, String firstName, int age, String email, boolean woman){
+    public User(int id, String name, String firstName, int age, String email, boolean woman, String mainPhotoPath, List<String> photoPaths){
+        setId(id);
         setAge(age);
         setFirstName(firstName);
         setName(name);
         setEmail(email);
         setWoman(woman);
+        setMainPhotoPath(mainPhotoPath);
+        setPhotoPaths(photoPaths);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getMainPhotoPath() {
+        return mainPhotoPath;
+    }
+
+    public void setMainPhotoPath(String mainPhotoPath) {
+        this.mainPhotoPath = mainPhotoPath;
+    }
+
+    public List<String> getPhotoPaths() {
+        return photoPaths;
+    }
+
+    public void setPhotoPaths(List<String> photoPaths) {
+        this.photoPaths = photoPaths;
     }
 
     public String getEmail() {
