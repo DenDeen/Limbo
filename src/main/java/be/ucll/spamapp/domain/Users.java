@@ -81,6 +81,8 @@ public class Users {
         user4.setMatchService(matchService4);
         users.add(user4);
         user4.setUsers(this);
+        potService1.addPotentieel(user3);
+        potService1.addPotentieel(user4);
     }
 
     public static Users getInstance(){

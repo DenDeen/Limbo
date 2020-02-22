@@ -26,8 +26,7 @@ public class TestScreen {
         System.out.println("-> " + user1.getMatchService().getMatches().size());
         System.out.println("-> " + user2.getMatchService().getMatches().size());*/
 
-        List<String>dum = Facade.getPhotoPaths("johndoe@outlook.com");
-        System.out.println(dum.get(0));
+        System.out.println("eric swiped");
 
     }
 }

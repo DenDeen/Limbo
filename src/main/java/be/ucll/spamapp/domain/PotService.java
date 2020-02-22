@@ -1,6 +1,5 @@
 package be.ucll.spamapp.domain;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,6 +15,11 @@ public class PotService {
     public PotService(){
         potentieleMatches = new LinkedList<>();
         pending = new ArrayList<>();
+    }
+
+    private void findPotentieleMatches()
+    {
+
     }
 
     public void addPotentieel(User user){
@@ -67,6 +71,7 @@ public class PotService {
 
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
+        this.findPotentieleMatches();
     }
 
 
