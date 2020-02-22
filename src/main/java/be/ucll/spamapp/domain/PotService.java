@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 @Service
@@ -17,9 +18,21 @@ public class PotService {
         pending = new ArrayList<>();
     }
 
+    private void isZelfdeSub(User u)
+    {
+        //if()
+    }
+
     private void findPotentieleMatches()
     {
-
+        List<User> potdum = new ArrayList<>();
+        for(User user:currentUser.getUsers().getPersons())
+        {
+            if(!pending.contains(user)&&!currentUser.getMatchService().getMatches().contains(user))
+            {
+                potdum.add(user);
+            }
+        }
     }
 
     public void addPotentieel(User user){

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 @Service
 public class Facade {
@@ -27,6 +26,18 @@ public class Facade {
         return null;
     }
 
+    public static User peekFirstPotential(String email)
+    {
+        for(User dum:allUsers.getPersons())
+        {
+            if(dum.getEmail().equals(email))
+            {
+               return dum.getPotService().getPotentieleMatches().peek();
+            }
+        }
+        return null;
+    }
+
     public static User swipe(String email, int keuze)
     {
         for(User dum:allUsers.getPersons())
@@ -39,7 +50,6 @@ public class Facade {
         }
         return null;
     }
-
 
     public static List<String> getPhotoPaths(String email)
     {
