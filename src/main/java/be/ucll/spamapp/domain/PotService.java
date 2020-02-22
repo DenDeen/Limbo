@@ -16,6 +16,7 @@ public class PotService {
 
     public PotService(){
         potentieleMatches = new LinkedList<>();
+        potentieleMatchesScore = new LinkedList<>();
         pending = new ArrayList<>();
     }
 
