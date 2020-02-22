@@ -12,25 +12,25 @@ public class Users {
 
 
     private Users(){
-        User user1 = new Zombie();
-        User user2 = new Human();
-        User user3 = new Human();
+        User user1 = new Human();
+        User user2 = new Zombie();
+        User user3 = new Zombie();
         User user4 = new Zombie();
         User user5 = new Zombie();
-        User user6 = new Human();
-        User user7 = new Human();
+        User user6 = new Zombie();
+        User user7 = new Zombie();
         User user8 = new Zombie();
         User user9 = new Zombie();
-        User user10 = new Human();
-        User user11 = new Human();
+        User user10 = new Zombie();
+        User user11 = new Zombie();
         User user12 = new Zombie();
         User user13 = new Zombie();
-        User user14 = new Human();
-        User user15 = new Human();
+        User user14 = new Zombie();
+        User user15 = new Zombie();
         User user16 = new Zombie();
         User user17 = new Zombie();
-        User user18 = new Human();
-        User user19 = new Human();
+        User user18 = new Zombie();
+        User user19 = new Zombie();
         User user20 = new Zombie();
 
         user1.setName("beast");
@@ -43,6 +43,24 @@ public class Users {
         PotService potService1 = new PotService();
         potService1.setCurrentUser(user1);
         potService1.addPotentieel(user2);
+        potService1.addPotentieel(user3);
+        potService1.addPotentieel(user2);
+        potService1.addPotentieel(user5);
+        potService1.addPotentieel(user6);
+        potService1.addPotentieel(user7);
+        potService1.addPotentieel(user8);
+        potService1.addPotentieel(user9);
+        potService1.addPotentieel(user10);
+        potService1.addPotentieel(user11);
+        potService1.addPotentieel(user12);
+        potService1.addPotentieel(user13);
+        potService1.addPotentieel(user14);
+        potService1.addPotentieel(user15);
+        potService1.addPotentieel(user16);
+        potService1.addPotentieel(user17);
+        potService1.addPotentieel(user18);
+        potService1.addPotentieel(user19);
+        potService1.addPotentieel(user20);
         user1.setPotService(potService1);
         MatchService matchService1 = new MatchService();
         matchService1.setCurrentuser(user1);
