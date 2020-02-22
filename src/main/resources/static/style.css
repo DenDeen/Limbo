@@ -96,3 +96,8 @@ body{
     margin: 2em;
     width: 100vw;
 }
+.singles{
+    font-size: 1.5rem;
+    font-style: oblique;
+    color: rgba(130, 130, 130, 0.35);
+}
