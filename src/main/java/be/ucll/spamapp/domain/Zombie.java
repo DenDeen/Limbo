@@ -6,11 +6,13 @@ public class Zombie extends User {
 
     private LocalDate date;
 
-    public Zombie(String name, String firstName, int age, LocalDate date) {
+    public Zombie() {}
 
-        super(name, firstName, age);
+    /*public Zombie(String name, String firstName, int age, LocalDate date) {
+
+        //super(name, firstName, age);
         setDate(date);
-    }
+    }*/
 
     public LocalDate getDate() {
         return date;

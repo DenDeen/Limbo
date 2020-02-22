@@ -5,9 +5,15 @@ import java.util.ArrayList;
 public class Users {
 
     private ArrayList<User> users = new ArrayList<>();
+    private static final Users INSTANCE = new Users();
 
-    public Users(){
 
+    private Users(){
+
+    }
+
+    public static Users getInstance(){
+        return INSTANCE;
     }
 
     public void setPersons(ArrayList<User> persons) {
