@@ -54,7 +54,7 @@
         <p th:text="${user.firstName}"></p>
     </div>
 </div>
-<div class="username-box"> <a th:href="@{/profile/(user=${user.email})}">more info...</a></div>
+<div class="username-box"> <a th:href="@{/profile(user=${user.email})}">more info...</a></div>
 
 
 
