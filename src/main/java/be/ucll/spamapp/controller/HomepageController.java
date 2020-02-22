@@ -33,13 +33,13 @@ public class HomepageController {
     @GetMapping("/swipe")
     public String swipe(Model model, @CookieValue(value = "email") String email, @RequestParam(value="direction") String direction){
         try{
-            model.addAttribute("user", Facade.swipe(email, -1));
+            model.addAttribute("user", Facade.swipe(email, 1));
             model.addAttribute("nextUser", Facade.getPotentiele(email).get(1));
             model.addAttribute("email", email);
             return "homepage";
         }
         catch (Exception e){
-            return "homepage";
+            return "geenMatches";
         }
 
 
