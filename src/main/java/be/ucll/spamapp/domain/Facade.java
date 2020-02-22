@@ -16,16 +16,17 @@ public class Facade {
 
 
 
-    private static void swipe(String email, int keuze)
+    private static User swipe(String email, int keuze)
     {
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
-                if(keuze==1) {dum.getPotService().swipeRight();}
-                else{dum.getPotService().swipeLeft();}
+                if(keuze==1) {return dum.getPotService().swipeRight();}
+                else{return dum.getPotService().swipeLeft();}
             }
         }
+        return null;
     }
 
 
