@@ -85,4 +85,14 @@
 
 body{
     background-color: rgb(245,247,250);
+    width: 100vw;
+}
+.image-container{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.match-table{
+    margin: 2em;
+    width: 100vw;
 }

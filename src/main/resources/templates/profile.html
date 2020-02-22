@@ -5,11 +5,16 @@
     <title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+<<<<<<< HEAD
     <style>
         .mySlides {display:none;}
     </style>
+=======
+>>>>>>> 132fb02a4e20983a8f120616ddbb03a8353c370d
 </head>
+
 <body>
+<<<<<<< HEAD
 
 
     <div class="username-box">
@@ -59,5 +64,71 @@
             x[slideIndex-1].style.display = "block";
         }
     </script>
+=======
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/homepage">
+        <img class="logo" src="zombie.png" alt="ucll">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/matches">Matches</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+    <!--<td th:text="${profile.firstName}">1</td>
+    <td th:text="${profile.name}"></td>
+    <td th:text="${profile.bio}"></td>
+    <td th:text="${profile.mainPhotoPath}"></td>
+    <td th:text="${profile.email}"></td>
+    <td th:text="${profile.woman}"></td>
+    <td th:text="${profile.age}"></td>
+    <td th:text="${profile.Length}"></td>
+    <td th:text="${profile.Orientation}"></td>-->
+
+    <table class="table match-table">
+        <tr>
+            <th scope="col">Picture</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Length</th>
+            <th scope="col">Bio</th>
+
+        </tr>
+        <tr >
+            <td> <div class="image-container"> <img th:src="@{${profile.mainPhotoPath}}" title="photo" height="200px" width="200px" /></div></td>
+            <td th:text="${profile.firstName}"></td>
+            <td th:text="${profile.name}"></td>
+            <td th:text="${profile.age}"></td>
+            <td th:text="${profile.Length}"></td>
+            <td th:text="${profile.bio}"></td>
+
+
+
+        </tr>
+    </table>
+
+>>>>>>> 132fb02a4e20983a8f120616ddbb03a8353c370d
 </body>
 </html>

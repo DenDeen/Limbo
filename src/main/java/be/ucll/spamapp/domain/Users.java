@@ -46,7 +46,7 @@ public class Users {
         potService1.setCurrentUser(user1);
         potService1.addPotentieel(user2);
         potService1.addPotentieel(user3);
-        potService1.addPotentieel(user2);
+        potService1.addPotentieel(user4);
         potService1.addPotentieel(user5);
         potService1.addPotentieel(user6);
         potService1.addPotentieel(user7);
@@ -119,7 +119,7 @@ public class Users {
         user4.setFirstName("Rachel");
         user4.setGeboortedatum(LocalDate.now());
         user4.setWoman(false);
-        user4.setEmail("rachelflint@yahoo.com");
+        user4.setEmail("rachelflint@gmail.com");
         user4.setMainPhotoPath("users/"+user4.getEmail()+"/profile.jpg");
         ((Zombie) user4).setDate(LocalDate.now());
         PotService potService4 = new PotService();

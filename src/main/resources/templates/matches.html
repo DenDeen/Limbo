@@ -3,21 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Matches</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table>
-    <tr>
-        <th>First Name</th>
-        <th>Name</th>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/homepage">
+        <img class="logo" src="zombie.png" alt="ucll">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <th>Bio</th>
-        <th>picture</th>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/matches">Matches</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<table class="table match-table">
+    <tr>
+        <th scope="col">Picture</th>
+        <th scope="col">Last Name</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">Bio</th>
     </tr>
     <tr th:each="match : ${matches}">
+        <td> <div class="image-container"> <img th:src="@{${match.mainPhotoPath}}" title="photo" height="50px" width="50px" /></div></td>
         <td th:text="${match.firstName}">1</td>
         <td th:text="${match.name}"></td>
         <td th:text="${match.bio}"></td>
-        <td th:text="${match.mainPhotoPath}"></td>
     </tr>
 </table>
 </body>
