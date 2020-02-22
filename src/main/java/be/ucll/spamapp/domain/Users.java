@@ -33,8 +33,8 @@ public class Users {
         User user19 = new Zombie();
         User user20 = new Zombie();
 
-        user1.setName("beast");
-        user1.setFirstName("eric");
+        user1.setName("Beast");
+        user1.setFirstName("Eric");
         user1.setGeboortedatum(LocalDate.now());
         user1.setWoman(false);
         user1.setEmail("ericbeast@yahoo.com");
@@ -70,8 +70,8 @@ public class Users {
         user1.setAge(34);
         user1.setOrientation('m');
 
-        user2.setName("plane");
-        user2.setFirstName("jane");
+        user2.setName("Plane");
+        user2.setFirstName("Jane");
         user2.setGeboortedatum(LocalDate.now());
         user2.setWoman(true);
         user2.setEmail("janeplane@gmail.com");
@@ -86,12 +86,12 @@ public class Users {
         users.add(user2);
         user2.setUsers(this);
         user2.setLength(175);
-        user2.setAge(34);
+        user2.setAge(20);
         user2.setOrientation('m');
 
 
-        user3.setName("doe");
-        user3.setFirstName("john");
+        user3.setName("Doe");
+        user3.setFirstName("John");
         user3.setGeboortedatum(LocalDate.now());
         user3.setWoman(true);
         user3.setEmail("johndoe@outlook.com");
@@ -106,11 +106,11 @@ public class Users {
         users.add(user3);
         user3.setUsers(this);
         user3.setLength(175);
-        user3.setAge(34);
+        user3.setAge(18);
         user3.setOrientation('m');
 
-        user4.setName("flint");
-        user4.setFirstName("rachel");
+        user4.setName("Flint");
+        user4.setFirstName("Rachel");
         user4.setGeboortedatum(LocalDate.now());
         user4.setWoman(false);
         user4.setEmail("rachelflint@yahoo.com");
@@ -126,7 +126,7 @@ public class Users {
         users.add(user4);
         user4.setUsers(this);
         user4.setLength(175);
-        user4.setAge(34);
+        user4.setAge(19);
         user4.setOrientation('m');
 
         user5.setName("Advertisement");
@@ -146,7 +146,7 @@ public class Users {
         users.add(user5);
         user5.setUsers(this);
         user5.setLength(175);
-        user5.setAge(34);
+        user5.setAge(0);
         user5.setOrientation('m');
 
         user6.setName("Dec");
@@ -165,7 +165,7 @@ public class Users {
         users.add(user6);
         user6.setUsers(this);
         user6.setLength(175);
-        user6.setAge(34);
+        user6.setAge(44);
         user6.setOrientation('m');
 
         user7.setName("Ghi");
@@ -184,7 +184,7 @@ public class Users {
         users.add(user7);
         user7.setUsers(this);
         user7.setLength(175);
-        user7.setAge(34);
+        user7.setAge(21);
         user7.setOrientation('m');
 
         user8.setName("Abc");
@@ -204,7 +204,7 @@ public class Users {
         users.add(user8);
         user8.setUsers(this);
         user8.setLength(175);
-        user8.setAge(34);
+        user8.setAge(66);
         user8.setOrientation('m');
 
         user9.setName("Jkl");
@@ -224,11 +224,11 @@ public class Users {
         users.add(user9);
         user9.setUsers(this);
         user9.setLength(175);
-        user9.setAge(34);
+        user9.setAge(77);
         user9.setOrientation('m');
 
-        user10.setName("add");
-        user10.setFirstName("add");
+        user10.setName("Advertisements");
+        user10.setFirstName("Advertisements");
         user10.setGeboortedatum(LocalDate.now());
         user10.setWoman(true);
         user10.setEmail("barcoadvertisements@gmail.com");
@@ -243,7 +243,7 @@ public class Users {
         users.add(user10);
         user10.setUsers(this);
         user10.setLength(175);
-        user10.setAge(34);
+        user10.setAge(0);
         user10.setOrientation('m');
 
         user11.setName("Marascalco");
@@ -262,7 +262,7 @@ public class Users {
         users.add(user11);
         user11.setUsers(this);
         user11.setLength(175);
-        user11.setAge(34);
+        user11.setAge(30);
         user11.setOrientation('m');
 
         user12.setName("Hosch");
@@ -282,7 +282,7 @@ public class Users {
         users.add(user12);
         user12.setUsers(this);
         user12.setLength(175);
-        user12.setAge(34);
+        user12.setAge(25);
         user12.setOrientation('m');
 
         user13.setName("JefCoat");
@@ -302,7 +302,7 @@ public class Users {
         users.add(user13);
         user13.setUsers(this);
         user13.setLength(175);
-        user13.setAge(34);
+        user13.setAge(29);
         user13.setOrientation('m');
 
         user14.setName("Emerald");
@@ -321,11 +321,11 @@ public class Users {
         users.add(user14);
         user14.setUsers(this);
         user14.setLength(175);
-        user14.setAge(34);
+        user14.setAge(59);
         user14.setOrientation('m');
 
-        user15.setName("add");
-        user15.setFirstName("add");
+        user15.setName("Advertisements");
+        user15.setFirstName("Advertisements");
         user15.setGeboortedatum(LocalDate.now());
         user15.setWoman(true);
         user15.setEmail("barcoadvertisements@gmail.com");
@@ -340,7 +340,7 @@ public class Users {
         users.add(user15);
         user15.setUsers(this);
         user15.setLength(175);
-        user15.setAge(34);
+        user15.setAge(0);
         user15.setOrientation('m');
 
         user16.setName("Decamp");
@@ -360,7 +360,7 @@ public class Users {
         users.add(user16);
         user16.setUsers(this);
         user16.setLength(175);
-        user16.setAge(34);
+        user16.setAge(27);
         user16.setOrientation('m');
 
         user17.setName("Harton");
@@ -380,7 +380,7 @@ public class Users {
         users.add(user17);
         user17.setUsers(this);
         user17.setLength(175);
-        user17.setAge(34);
+        user17.setAge(55);
         user17.setOrientation('m');
 
         user18.setName("Couvilier");
@@ -399,7 +399,7 @@ public class Users {
         users.add(user18);
         user18.setUsers(this);
         user18.setLength(175);
-        user18.setAge(34);
+        user18.setAge(90);
         user18.setOrientation('m');
 
         user19.setName("Donald");
@@ -418,11 +418,11 @@ public class Users {
         users.add(user19);
         user19.setUsers(this);
         user19.setLength(175);
-        user19.setAge(34);
+        user19.setAge(10);
         user19.setOrientation('m');
 
-        user20.setName("add");
-        user20.setFirstName("add");
+        user20.setName("Advertisements");
+        user20.setFirstName("Advertisements");
         user20.setGeboortedatum(LocalDate.now());
         user20.setWoman(false);
         user20.setEmail("barcoadvertisements@gmail.com");
@@ -438,7 +438,7 @@ public class Users {
         users.add(user20);
         user20.setUsers(this);
         user20.setLength(175);
-        user20.setAge(34);
+        user20.setAge(0);
         user20.setOrientation('m');
 
         potService1.addPotentieel(user3);
