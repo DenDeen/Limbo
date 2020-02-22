@@ -14,22 +14,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class IndexController {
 
-    //@Autowired
-    //private User user;
+    @Autowired
+    Account account;
     public IndexController(){
 
     }
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String printRestaurants(Model model) {
-        //model.addAttribute("user", user.getAge());
-        return "";
+        model.addAttribute("account", new Account());
+        return "index";
     }
 
     @PostMapping("/login")
-    public String loginSubmit(@RequestParam("email") String email, @RequestParam("password") String password){
-        System.out.println(email);
-        return "";
+    public String loginSubmit(@ModelAttribute("account") Account account, Model model ){
+        model.addAttribute(account);
+        System.out.println(account.getEmail());
+        return "homepage";
     }
 }
 
