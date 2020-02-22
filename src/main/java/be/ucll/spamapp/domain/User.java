@@ -2,6 +2,7 @@ package be.ucll.spamapp.domain;
 
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +93,7 @@ public abstract class User {
     }
 
 
+
     public Users getUsers() {
         return users;
     }
@@ -141,6 +143,20 @@ public abstract class User {
     }
 
     public List<String> getPhotoPaths() {
+        System.out.println(System.getProperty("user.dir"));
+        File folder = new File("src/main/resources/static/users/" + this.getEmail()+"/");
+        File[] listOfFiles = folder.listFiles();
+        ArrayList<String> photoPaths = new ArrayList<>();
+
+
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile()) {
+                System.out.println("File " + listOfFiles[i].getName());
+                photoPaths.add("users/" + this.getEmail() + "/" + listOfFiles[i].getName());
+            }
+        }
+
         return photoPaths;
     }
 
