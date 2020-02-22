@@ -14,29 +14,20 @@ public class Facade {
     public Facade() {
     }
 
-    public static void swipeRechts(String email)
+
+
+    private static void swipe(String email, int keuze)
     {
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
-                dum.getPotService().swipeRight();
-                return;
+                if(keuze==1) {dum.getPotService().swipeRight();}
+                else{dum.getPotService().swipeLeft();}
             }
         }
     }
 
-    public static void swipeLinks(String email)
-    {
-        for(User dum:allUsers.getPersons())
-        {
-            if(dum.getEmail().equals(email))
-            {
-                dum.getPotService().swipeLeft();
-                return;
-            }
-        }
-    }
 
     public static List<String> getPhotoPaths(String email)
     {
