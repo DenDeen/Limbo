@@ -6,6 +6,6 @@ public enum Mankement {
     RECHTERARM,
     LINKERBEEN,
     RECHTERBEEN,
-    
+
 
 }

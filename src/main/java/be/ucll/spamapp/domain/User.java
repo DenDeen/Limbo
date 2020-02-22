@@ -8,16 +8,29 @@ public abstract class User {
     private int age;
     private String email;
     private boolean vrouw;
-    private boolean[] ledematen = new boolean[4];
 
-    public User(String name, String firstName, int age) {
+    public boolean isVrouw() {
+        return vrouw;
+    }
+
+    public void setVrouw(boolean vrouw) {
+        this.vrouw = vrouw;
+    }
+
+    public User(String name, String firstName, int age, String email, boolean vrouw){
         setAge(age);
         setFirstName(firstName);
         setName(name);
+        setEmail(email);
+        setVrouw(vrouw);
     }
 
-    public void setLedematen(boolean linkerArm, boolean rechterArm, boolean linkerBeen, boolean rechterBeen) {
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setName(String name) {
