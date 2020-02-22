@@ -39,6 +39,7 @@ public class Facade {
             {
                paar[0] = dum.getPotService().getPotentieleMatches().peek();
                paar[1] = dum.getPotService().getPotentieleMatchesScore().peek();
+               return paar;
             }
         }
         return null;
