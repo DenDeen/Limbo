@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="homepage-body">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="/homepage">
@@ -22,7 +22,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Matches</a>
+                <a class="nav-link" href="/matches">Matches</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,8 +39,6 @@
 
     </div>
 </nav>
-<p th:text="'email: ' + ${user.email}" />
-<p th:text="'path: ' + ${photopath}" />
 
 
 
@@ -49,8 +47,13 @@
     <td th:text="${t.email}"></td>
     <td th:text="${t.password}"></td>
 </tr>-->
+<div class="username-box">
+    <p th:text="${user.name}"></p>
+</div>
 
-<div id="board"></div>
+<div id="board">
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 <script>
@@ -64,8 +67,9 @@
             this.board = element
 
             // add first two cards programmatically
+            this.pushFirst()
             this.push()
-            this.push()
+
 
             // handle gestures
             this.handle()
@@ -254,7 +258,27 @@
             let card = document.createElement('div')
 
             card.classList.add('card')
-            var path = "[[${photopath}]]"
+            var path = "[[${nextUser.MainPhotoPath}]]"
+
+            card.style.backgroundImage =
+                "url('" + path + "')"
+
+            if (this.board.firstChild) {
+                this.board.insertBefore(card, this.board.firstChild)
+            } else {
+                this.board.append(card)
+            }
+
+        }
+        pushFirst() {
+
+
+
+
+            let card = document.createElement('div')
+
+            card.classList.add('card')
+            var path = "[[${user.MainPhotoPath}]]"
 
             card.style.backgroundImage =
                 "url('" + path + "')"
@@ -274,8 +298,9 @@
         /*var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", "/newcard?direction=" + direction, true);
         xmlhttp.send();*/
-
-        window.location = "/newcard?direction=" + direction
+        if(direction) {
+            window.location = "/swipe?direction=" + direction
+        }
 
     }
 
