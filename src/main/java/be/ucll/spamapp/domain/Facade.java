@@ -1,10 +1,13 @@
 package be.ucll.spamapp.domain;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+@Service
 public class Facade {
     static Users allUsers = Users.getInstance();
 
