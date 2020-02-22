@@ -1,28 +1,26 @@
 package be.ucll.spamapp.domain;
 
-import java.util.Map;
-
 public abstract class User {
     private String name;
     private String firstName;
     private int age;
     private String email;
-    private boolean vrouw;
+    private boolean woman;
 
-    public boolean isVrouw() {
-        return vrouw;
+    public boolean isWoman() {
+        return woman;
     }
 
-    public void setVrouw(boolean vrouw) {
-        this.vrouw = vrouw;
+    public void setWoman(boolean woman) {
+        this.woman = woman;
     }
 
-    public User(String name, String firstName, int age, String email, boolean vrouw){
+    public User(String name, String firstName, int age, String email, boolean woman){
         setAge(age);
         setFirstName(firstName);
         setName(name);
         setEmail(email);
-        setVrouw(vrouw);
+        setWoman(woman);
     }
 
     public String getEmail() {
