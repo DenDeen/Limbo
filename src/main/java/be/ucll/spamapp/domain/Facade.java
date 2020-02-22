@@ -13,26 +13,32 @@ public class Facade {
     public Facade() {
     }
 
-    public static User peekSecondPotential(String email)
+    public static Object[] peekSecondPotential(String email)
     {
+        Object[] paar = new Object[2];
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
                 ArrayList<User>dumdum = new ArrayList<>(dum.getPotService().getPotentieleMatches());
-                return dumdum.get(1);
+                paar[0] = dumdum.get(1);
+                ArrayList<Integer> dumdumdum = new ArrayList<>(dum.getPotService().getPotentieleMatchesScore());
+                paar[1] = dumdumdum.get(1);
+                return paar;
             }
         }
         return null;
     }
 
-    public static User peekFirstPotential(String email)
+    public static Object[] peekFirstPotential(String email)
     {
+        Object[] paar = new Object[2];
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
-               return dum.getPotService().getPotentieleMatches().peek();
+               paar[0] = dum.getPotService().getPotentieleMatches().peek();
+               paar[1] = dum.getPotService().getPotentieleMatchesScore().peek();
             }
         }
         return null;
@@ -97,5 +103,9 @@ public class Facade {
             }
         }
         return null;
+    }
+
+    public static User getUser(String email){
+        return Users.getInstance().getUser(email);
     }
 }

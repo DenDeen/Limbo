@@ -60,3 +60,21 @@
 .navbar-brand{
     padding: 0;
 }
+
+.username-box{
+    max-width: 10vw;
+
+}
+.homepage-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.no-singles{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}

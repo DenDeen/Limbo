@@ -10,6 +10,7 @@ import java.util.Queue;
 @Service
 public class PotService {
     private Queue<User> potentieleMatches;
+    private Queue<Integer> potentieleMatchesScore;
     private ArrayList<User> pending;
     private User currentUser;
 
@@ -18,19 +19,28 @@ public class PotService {
         pending = new ArrayList<>();
     }
 
-    private void isZelfdeSub(User u)
+    private boolean isZelfdeSub(User u)
     {
-        //if()
+        return currentUser.getClass( )== u.getClass();
+    }
+
+    private int berekenScore(User pot)
+    {
+        double randomDouble = Math.random();
+        randomDouble = randomDouble * 100 + 1;
+        return (int) randomDouble;
     }
 
     private void findPotentieleMatches()
     {
         List<User> potdum = new ArrayList<>();
+        List<Integer> potscoreDum = new ArrayList<>();
         for(User user:currentUser.getUsers().getPersons())
         {
-            if(!pending.contains(user)&&!currentUser.getMatchService().getMatches().contains(user))
+            if(!isZelfdeSub(user))
             {
                 potdum.add(user);
+                potscoreDum.add(berekenScore(user));
             }
         }
     }
@@ -60,6 +70,14 @@ public class PotService {
             pending.add(lovedOne);
         }
         return potentieleMatches.peek();
+    }
+
+    public Queue<Integer> getPotentieleMatchesScore() {
+        return potentieleMatchesScore;
+    }
+
+    public void setPotentieleMatchesScore(Queue<Integer> potentieleMatchesScore) {
+        this.potentieleMatchesScore = potentieleMatchesScore;
     }
 
     public Queue<User> getPotentieleMatches() {

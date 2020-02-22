@@ -22,6 +22,35 @@ public abstract class User {
     private PotService potService;
     private MatchService matchService;
     private Users users;
+    private int age;
+    private int Length;
+    private char orientation;
+    //private List<Defect> defects;
+
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getLength() {
+        return Length;
+    }
+
+    public void setLength(int length) {
+        Length = length;
+    }
+
+    public char getOrientation() {
+        return orientation;
+    }
+
+    public void setOrientation(char orientation) {
+        this.orientation = orientation;
+    }
 
     public User() {
     }
