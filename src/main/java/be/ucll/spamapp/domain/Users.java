@@ -39,7 +39,6 @@ public class Users {
         user1.setWoman(false);
         user1.setEmail("ericbeast@yahoo.com");
         user1.setMainPhotoPath("users/"+user1.getEmail()+"/profile.jpg");
-        ((Zombie) user1).setDate(LocalDate.now());
         PotService potService1 = new PotService();
         potService1.setCurrentUser(user1);
         potService1.addPotentieel(user2);
