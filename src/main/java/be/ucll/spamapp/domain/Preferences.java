@@ -6,5 +6,5 @@ public class Preferences {
     private int prefMinAge;
     private int prefMaxAge;
     private List<Defect> prefdefects;
-    private int lol;
+
 }

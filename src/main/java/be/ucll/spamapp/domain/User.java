@@ -2,6 +2,7 @@ package be.ucll.spamapp.domain;
 
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -9,13 +10,12 @@ import java.util.Objects;
 @Service
 public abstract class User {
     private String mainPhotoPath;
-    private List<String> photoPaths;
+    private List<String> photoPaths = new ArrayList<>();
     private String name;
     private String firstName;
-    private int age;
+    private LocalDate geboortedatum;
     private String email;
     private boolean woman;
-    private String orientation;
     private List<Defect> defects;
     private Preferences preferences;
 
@@ -26,8 +26,8 @@ public abstract class User {
     public User() {
     }
 
-    public User(String name, String firstName, int age, String email, boolean woman, String mainPhotoPath, List<String> photoPaths){
-        setAge(age);
+    public User(String name, String firstName, LocalDate geboortedatum, String email, boolean woman, String mainPhotoPath, List<String> photoPaths){
+        setGeboortedatum(geboortedatum);
         setFirstName(firstName);
         setName(name);
         setEmail(email);
@@ -46,7 +46,7 @@ public abstract class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(mainPhotoPath, photoPaths, name, firstName, age, email, woman, potService, matchService, users);
+        return Objects.hash(mainPhotoPath, photoPaths, name, firstName, geboortedatum, email, woman, potService, matchService, users);
     }
 
     public List<String> getAllPhotoPaths()
@@ -122,10 +122,6 @@ public abstract class User {
         this.firstName = firstName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getName() {
         return name;
     }
@@ -134,7 +130,27 @@ public abstract class User {
         return firstName;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getGeboortedatum() {
+        return geboortedatum;
+    }
+
+    public void setGeboortedatum(LocalDate geboortedatum) {
+        this.geboortedatum = geboortedatum;
+    }
+
+    public List<Defect> getDefects() {
+        return defects;
+    }
+
+    public void setDefects(List<Defect> defects) {
+        this.defects = defects;
+    }
+
+    public Preferences getPreferences() {
+        return preferences;
+    }
+
+    public void setPreferences(Preferences preferences) {
+        this.preferences = preferences;
     }
 }

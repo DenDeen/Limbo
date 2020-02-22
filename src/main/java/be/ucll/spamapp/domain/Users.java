@@ -18,10 +18,10 @@ public class Users {
         User user4 = new Zombie();
         user1.setName("beast");
         user1.setFirstName("eric");
-        user1.setAge(26);
+        user1.setGeboortedatum(LocalDate.now());
         user1.setWoman(false);
         user1.setEmail("ericbeast@yahoo.com");
-        user1.setMainPhotoPath("users/"+user1.getEmail()+"/profile.jps");
+        user1.setMainPhotoPath("users/"+user1.getEmail()+"/profile.jpg");
         ((Zombie) user1).setDate(LocalDate.now());
         PotService potService1 = new PotService();
         potService1.setCurrentUser(user1);
@@ -35,10 +35,10 @@ public class Users {
 
         user2.setName("plane");
         user2.setFirstName("jane");
-        user2.setAge(22);
+        user2.setGeboortedatum(LocalDate.now());
         user2.setWoman(true);
         user2.setEmail("janeplane@gmail.com");
-        user2.setMainPhotoPath("users/"+user2.getEmail()+"/profile.jps");
+        user2.setMainPhotoPath("users/"+user2.getEmail()+"/profile.jpg");
         PotService potService2 = new PotService();
         potService2.setCurrentUser(user2);
         potService2.addPotentieel(user1);
@@ -51,10 +51,10 @@ public class Users {
 
         user3.setName("doe");
         user3.setFirstName("john");
-        user3.setAge(22);
+        user3.setGeboortedatum(LocalDate.now());
         user3.setWoman(true);
-        user3.setEmail("johndoe@gmail.com");
-        user3.setMainPhotoPath("users/"+user3.getEmail()+"/profile.jps");
+        user3.setEmail("johndoe@outlook.com");
+        user3.setMainPhotoPath("users/"+user3.getEmail()+"/profile.jpg");
         PotService potService3 = new PotService();
         potService3.setCurrentUser(user3);
         potService3.addPotentieel(user1);
@@ -67,10 +67,10 @@ public class Users {
 
         user4.setName("flint");
         user4.setFirstName("rachel");
-        user4.setAge(26);
+        user4.setGeboortedatum(LocalDate.now());
         user4.setWoman(false);
         user4.setEmail("rachelflint@yahoo.com");
-        user4.setMainPhotoPath("users/"+user4.getEmail()+"/profile.jps");
+        user4.setMainPhotoPath("users/"+user4.getEmail()+"/profile.jpg");
         ((Zombie) user4).setDate(LocalDate.now());
         PotService potService4 = new PotService();
         potService4.setCurrentUser(user4);
