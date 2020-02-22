@@ -16,6 +16,7 @@ public class PotService {
 
     public PotService(){
         potentieleMatches = new LinkedList<>();
+        potentieleMatchesScore = new LinkedList<>();
         pending = new ArrayList<>();
     }
 
@@ -47,6 +48,7 @@ public class PotService {
 
     public void addPotentieel(User user){
         potentieleMatches.add(user);
+        potentieleMatchesScore.add(berekenScore(user));
     }
 
     public User swipeLeft(){
@@ -58,7 +60,7 @@ public class PotService {
     }
 
     public User swipeRight(){
-        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.remove());
+        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         ArrayList<User> dummy = lovedOne.getPotService().getPending();
         if(dummy.contains(currentUser))
