@@ -62,7 +62,11 @@
 }
 
 .username-box{
-    max-width: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+    margin: 2em;
 
 }
 .homepage-body{
@@ -77,4 +81,8 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+body{
+    background-color: rgb(245,247,250);
 }
