@@ -40,6 +40,9 @@ public class Users {
         user1.setEmail("ericbeast@yahoo.com");
         user1.setMainPhotoPath("users/"+user1.getEmail()+"/profile.jpg");
         PotService potService1 = new PotService();
+
+        MatchService matchService1 = new MatchService();
+        matchService1.setCurrentuser(user1);
         potService1.setCurrentUser(user1);
         potService1.addPotentieel(user2);
         potService1.addPotentieel(user3);
@@ -55,14 +58,12 @@ public class Users {
         potService1.addPotentieel(user13);
         potService1.addPotentieel(user14);
         potService1.addPotentieel(user15);
-        potService1.addPotentieel(user16);
-        potService1.addPotentieel(user17);
-        potService1.addPotentieel(user18);
-        potService1.addPotentieel(user19);
-        potService1.addPotentieel(user20);
+        matchService1.addMatch(user16);
+        matchService1.addMatch(user17);
+        matchService1.addMatch(user18);
+        matchService1.addMatch(user19);
+        matchService1.addMatch(user20);
         user1.setPotService(potService1);
-        MatchService matchService1 = new MatchService();
-        matchService1.setCurrentuser(user1);
         user1.setMatchService(matchService1);
         users.add(user1);
         user1.setUsers(this);
@@ -362,6 +363,7 @@ public class Users {
         user16.setLength(175);
         user16.setAge(34);
         user16.setOrientation('m');
+        user16.setBio("Undead man looking for healthy woman to spend my last days with");
 
         user17.setName("Harton");
         user17.setFirstName("Weston");
@@ -382,6 +384,7 @@ public class Users {
         user17.setLength(175);
         user17.setAge(34);
         user17.setOrientation('m');
+        user17.setBio("My heart may not be beating anymore but it's still full of love.");
 
         user18.setName("Couvilier");
         user18.setFirstName("Amber");
@@ -401,6 +404,7 @@ public class Users {
         user18.setLength(175);
         user18.setAge(34);
         user18.setOrientation('m');
+        user18.setBio("Even though I lost an eye recently I'm still satisfied with my Barco screen!");
 
         user19.setName("Donald");
         user19.setFirstName("Trump");
@@ -420,9 +424,11 @@ public class Users {
         user19.setLength(175);
         user19.setAge(34);
         user19.setOrientation('m');
+        user19.setBio("Even the highest wall won't stop me from loving you ;) ");
 
-        user20.setName("add");
-        user20.setFirstName("add");
+
+        user20.setName("Zegers");
+        user20.setFirstName("Jonas");
         user20.setGeboortedatum(LocalDate.now());
         user20.setWoman(false);
         user20.setEmail("barcoadvertisements@gmail.com");
@@ -440,6 +446,8 @@ public class Users {
         user20.setLength(175);
         user20.setAge(34);
         user20.setOrientation('m');
+        user20.setBio("I'm hopeless");
+
 
         potService1.addPotentieel(user3);
         potService1.addPotentieel(user4);
