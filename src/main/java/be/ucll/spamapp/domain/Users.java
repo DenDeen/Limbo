@@ -21,13 +21,15 @@ public class Users {
         user1.setAge(26);
         user1.setWoman(false);
         user1.setEmail("ericbeast@yahoo.com");
+        user1.setMainPhotoPath("users/"+user1.getEmail()+"/profile.jps");
         ((Zombie) user1).setDate(LocalDate.now());
         PotService potService1 = new PotService();
         potService1.setCurrentUser(user1);
         potService1.addPotentieel(user2);
+        user1.setPotService(potService1);
         MatchService matchService1 = new MatchService();
         matchService1.setCurrentuser(user1);
-        user1.setPotService(potService1);
+        user1.setMatchService(matchService1);
         users.add(user1);
         user1.setUsers(this);
 
@@ -36,12 +38,14 @@ public class Users {
         user2.setAge(22);
         user2.setWoman(true);
         user2.setEmail("janeplane@gmail.com");
+        user2.setMainPhotoPath("users/"+user2.getEmail()+"/profile.jps");
         PotService potService2 = new PotService();
         potService2.setCurrentUser(user2);
         potService2.addPotentieel(user1);
         MatchService matchService2 = new MatchService();
         matchService2.setCurrentuser(user2);
         user2.setPotService(potService2);
+        user2.setMatchService(matchService2);
         users.add(user2);
         user2.setUsers(this);
 
@@ -50,12 +54,14 @@ public class Users {
         user3.setAge(22);
         user3.setWoman(true);
         user3.setEmail("johndoe@gmail.com");
+        user3.setMainPhotoPath("users/"+user3.getEmail()+"/profile.jps");
         PotService potService3 = new PotService();
         potService3.setCurrentUser(user3);
         potService3.addPotentieel(user1);
         MatchService matchService3 = new MatchService();
         matchService3.setCurrentuser(user3);
         user3.setPotService(potService3);
+        user3.setMatchService(matchService3);
         users.add(user3);
         user3.setUsers(this);
 
@@ -64,6 +70,7 @@ public class Users {
         user4.setAge(26);
         user4.setWoman(false);
         user4.setEmail("rachelflint@yahoo.com");
+        user4.setMainPhotoPath("users/"+user4.getEmail()+"/profile.jps");
         ((Zombie) user4).setDate(LocalDate.now());
         PotService potService4 = new PotService();
         potService4.setCurrentUser(user4);
@@ -71,6 +78,7 @@ public class Users {
         MatchService matchService4 = new MatchService();
         matchService4.setCurrentuser(user4);
         user4.setPotService(potService4);
+        user4.setMatchService(matchService4);
         users.add(user4);
         user4.setUsers(this);
     }

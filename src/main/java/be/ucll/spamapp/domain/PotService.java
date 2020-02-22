@@ -34,7 +34,7 @@ public class PotService {
         int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         ArrayList<User> dummy = lovedOne.getPotService().getPending();
-        if(dummy.contains(this))
+        if(dummy.contains(currentUser))
         {
             lovedOne.getMatchService().addMatch(currentUser);
             currentUser.getMatchService().addMatch(lovedOne);

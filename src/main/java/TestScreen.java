@@ -14,9 +14,10 @@ public class TestScreen {
         user1.getPotService().swipeRight();
         System.out.println("nu zou jane in pending van eric zitten");
         System.out.println("-> "+user1.getPotService().getPending().get(0).getFirstName());
-        System.out.println("eric swiped jane naar rechts");
-        user2.getPotService().swipeRight();
-        System.out.println("nu zou jane en eric match zijn");
-        System.out.println("-> " + user1.getMatchService().getMatches().get(0));
+        System.out.println("jane swiped eric naar links");
+        user2.getPotService().swipeLeft();
+        System.out.println("nu zou eric en jane hun pending 0 zijn");
+        System.out.println("-> " + user1.getPotService().getPending().size());
+        System.out.println("-> " + user2.getPotService().getPending().size());
     }
 }
