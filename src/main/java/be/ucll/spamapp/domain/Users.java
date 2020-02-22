@@ -134,7 +134,7 @@ public class Users {
         users.add(user5);
         user5.setUsers(this);
 
-        user6.setName("Def");
+        user6.setName("Dec");
         user6.setFirstName("Jonas");
         user6.setGeboortedatum(LocalDate.now());
         user6.setWoman(true);
