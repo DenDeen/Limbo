@@ -28,6 +28,6 @@ public class TestScreen {
 
         List<String>dum = Facade.getPhotoPaths("johndoe@outlook.com");
         System.out.println(dum.get(0));
-        
+
     }
 }

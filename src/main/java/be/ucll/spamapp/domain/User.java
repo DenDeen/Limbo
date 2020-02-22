@@ -16,9 +16,9 @@ public abstract class User {
     private LocalDate geboortedatum;
     private String email;
     private boolean woman;
-    private List<Defect> defects;
+    private List<Defect> defects = new ArrayList<>();
     private Preferences preferences;
-
+    private String bio;
     private PotService potService;
     private MatchService matchService;
     private Users users;
@@ -73,6 +73,13 @@ public abstract class User {
         this.woman = woman;
     }
 
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     public PotService getPotService() {
         return potService;

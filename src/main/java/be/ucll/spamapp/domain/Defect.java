@@ -1,6 +1,7 @@
 package be.ucll.spamapp.domain;
 
 public enum Defect {
+
     LEFTARM,
     RIGHTARM,
     LEFTLEG,
