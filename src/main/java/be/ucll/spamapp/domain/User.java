@@ -1,7 +1,11 @@
 package be.ucll.spamapp.domain;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public abstract class User {
     private int id;
     private String mainPhotoPath;
