@@ -47,6 +47,7 @@ public class PotService {
 
     public void addPotentieel(User user){
         potentieleMatches.add(user);
+        potentieleMatchesScore.add(berekenScore(user));
     }
 
     public User swipeLeft(){
