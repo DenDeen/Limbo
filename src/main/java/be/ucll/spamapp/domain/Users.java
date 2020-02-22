@@ -82,9 +82,8 @@ public class Users {
         users.add(user4);
         user4.setUsers(this);
 
-        // matches testen
-        user1.getMatchService().addMatch(user2);
-        user1.getMatchService().addMatch(user3);
+        potService1.addPotentieel(user3);
+        potService1.addPotentieel(user4);
     }
 
     public static Users getInstance(){

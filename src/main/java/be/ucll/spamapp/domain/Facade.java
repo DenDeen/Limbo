@@ -14,29 +14,32 @@ public class Facade {
     public Facade() {
     }
 
-    public static void swipeRechts(String email)
+    public static User peekSecondPotential(String email)
     {
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
-                dum.getPotService().swipeRight();
-                return;
+                ArrayList<User>dumdum = new ArrayList<>(dum.getPotService().getPotentieleMatches());
+                return dumdum.get(1);
             }
         }
+        return null;
     }
 
-    public static void swipeLinks(String email)
+    public static User swipe(String email, int keuze)
     {
         for(User dum:allUsers.getPersons())
         {
             if(dum.getEmail().equals(email))
             {
-                dum.getPotService().swipeLeft();
-                return;
+                if(keuze==1) {return dum.getPotService().swipeRight();}
+                else{return dum.getPotService().swipeLeft();}
             }
         }
+        return null;
     }
+
 
     public static List<String> getPhotoPaths(String email)
     {

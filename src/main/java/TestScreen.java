@@ -26,8 +26,12 @@ public class TestScreen {
         System.out.println("-> " + user1.getMatchService().getMatches().size());
         System.out.println("-> " + user2.getMatchService().getMatches().size());*/
 
-        List<String>dum = Facade.getPhotoPaths("johndoe@outlook.com");
-        System.out.println(dum.get(0));
+        System.out.println(user1.getPotService().getPotentieleMatches());
+        System.out.println("eerste potentie van eric: " + user1.getPotService().getPotentieleMatches().peek());
+        System.out.println("eric swiped");
+        user1.getPotService().swipeLeft();
+        System.out.println(user1.getPotService().getPotentieleMatches());
+        System.out.println("-> " + user1.getPotService().getPotentieleMatches().peek());
 
     }
 }

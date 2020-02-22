@@ -23,16 +23,19 @@ public class HomepageController {
 
     @GetMapping("/homepage")
     public String load(Model model, @CookieValue(value = "email") String email) {
-        //model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
-        //model.addAttribute("name", Facade.getPotentiele(email).get(0));
+        model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
+        model.addAttribute("user", Facade.getPotentiele(email).get(0));
         System.out.println(email);
         model.addAttribute("email", email);
         return "homepage";
     }
 
     @GetMapping("/newcard")
-    public String newCard(Model model){
-        //model.addAttribute("potential", users.getPersons());
+    public String newCard(Model model, @CookieValue(value = "email") String email){
+        model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
+        model.addAttribute("user", Facade.getPotentiele(email).get(0));
+        System.out.println(email);
+        model.addAttribute("email", email);
         return "homepage";
     }
 

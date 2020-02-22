@@ -1,6 +1,5 @@
 package be.ucll.spamapp.domain;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,20 +17,25 @@ public class PotService {
         pending = new ArrayList<>();
     }
 
+    private void findPotentieleMatches()
+    {
+
+    }
+
     public void addPotentieel(User user){
         potentieleMatches.add(user);
     }
 
-    public void swipeLeft(){
-        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
+    public User swipeLeft(){
+        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.remove());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         lovedOne.getPotService().getPending().remove(this.currentUser);
         lovedOne.getPotService().getPotentieleMatches().remove(this.currentUser);
-
+        return potentieleMatches.peek();
     }
 
-    public void swipeRight(){
-        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
+    public User swipeRight(){
+        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.remove());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         ArrayList<User> dummy = lovedOne.getPotService().getPending();
         if(dummy.contains(currentUser))
@@ -42,6 +46,7 @@ public class PotService {
         else {
             pending.add(lovedOne);
         }
+        return potentieleMatches.peek();
     }
 
     public Queue<User> getPotentieleMatches() {
@@ -66,6 +71,7 @@ public class PotService {
 
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
+        this.findPotentieleMatches();
     }
 
 

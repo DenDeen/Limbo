@@ -39,8 +39,8 @@
 
     </div>
 </nav>
-<!--<p th:text="'email: ' + ${account.email}" />
-<p th:text="'password: ' + ${account.password}" />-->
+<p th:text="'email: ' + ${user.email}" />
+<p th:text="'path: ' + ${photopath}" />
 
 
 
@@ -249,14 +249,15 @@
 
             console.log(direction)
 
-            //notifyServlet(direction)
+            notifyServlet(direction)
 
             let card = document.createElement('div')
 
             card.classList.add('card')
+            var path = "[[${photopath}]]"
 
             card.style.backgroundImage =
-                "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random()*1000000) + "')"
+                "url('" + path + "')"
 
             if (this.board.firstChild) {
                 this.board.insertBefore(card, this.board.firstChild)
@@ -270,9 +271,11 @@
     function notifyServlet(direction)
     {
 
-        var xmlhttp = new XMLHttpRequest();
+        /*var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", "/newcard?direction=" + direction, true);
-        xmlhttp.send();
+        xmlhttp.send();*/
+
+        window.location = "/newcard?direction=" + direction
 
     }
 
