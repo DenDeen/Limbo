@@ -7,7 +7,6 @@ import java.util.Objects;
 
 @Service
 public abstract class User {
-    private int id;
     private String mainPhotoPath;
     private List<String> photoPaths;
     private String name;
@@ -22,8 +21,7 @@ public abstract class User {
     public User() {
     }
 
-    public User(int id, String name, String firstName, int age, String email, boolean woman, String mainPhotoPath, List<String> photoPaths){
-        setId(id);
+    public User(String name, String firstName, int age, String email, boolean woman, String mainPhotoPath, List<String> photoPaths){
         setAge(age);
         setFirstName(firstName);
         setName(name);
@@ -38,9 +36,7 @@ public abstract class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-                age == user.age &&
-                woman == user.woman &&
+        return  woman == user.woman &&
                 Objects.equals(mainPhotoPath, user.mainPhotoPath) &&
                 Objects.equals(photoPaths, user.photoPaths) &&
                 name.equals(user.name) &&
@@ -53,7 +49,7 @@ public abstract class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, mainPhotoPath, photoPaths, name, firstName, age, email, woman, potService, matchService, users);
+        return Objects.hash(mainPhotoPath, photoPaths, name, firstName, age, email, woman, potService, matchService, users);
     }
 
     public Users getUsers() {
@@ -87,14 +83,6 @@ public abstract class User {
 
     public void setMatchService(MatchService matchService) {
         this.matchService = matchService;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getMainPhotoPath() {

@@ -17,8 +17,8 @@ public class MatchService {
 
     public void deleteMatch(User user){
         for (User u: matches) {
-            if (user.getId() == u.getId()){
-                matches.remove(u.getId());
+            if (user.getEmail() == u.getEmail()){
+                matches.remove(u);
             }
         }
     }
@@ -27,11 +27,11 @@ public class MatchService {
         return matches;
     }
 
-    public User getMatch(int id){
+    public User getMatch(String email){
         for (User u: matches
         ) {
-            if (id == u.getId()){
-                return matches.get(id);
+            if (email == u.getEmail()){
+                return u;
             }
         }
         throw  new DomainException("the wanted user is not a match");
