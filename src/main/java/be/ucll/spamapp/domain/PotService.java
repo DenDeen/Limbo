@@ -53,6 +53,7 @@ public class PotService {
 
     public User swipeLeft(){
         int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.remove());
+        potentieleMatchesScore.poll();
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         lovedOne.getPotService().getPending().remove(this.currentUser);
         lovedOne.getPotService().getPotentieleMatches().remove(this.currentUser);
@@ -60,7 +61,9 @@ public class PotService {
     }
 
     public User swipeRight(){
-        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
+        User dum = potentieleMatches.poll();
+        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(dum);
+        potentieleMatchesScore.poll();
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         ArrayList<User> dummy = lovedOne.getPotService().getPending();
         if(dummy.contains(currentUser))
