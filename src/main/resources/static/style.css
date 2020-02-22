@@ -93,11 +93,19 @@ body{
     border-radius: 25px;
 }
 .match-table{
-    margin: 2em;
-    width: 100vw;
+    margin: 2em 2em 5em;
 }
 .singles{
     font-size: 1.5rem;
     font-style: oblique;
     color: rgba(130, 130, 130, 0.35);
+}
+.w3-display-container{
+    width: 15vw;
+    margin: 2em;
+}
+.profile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
