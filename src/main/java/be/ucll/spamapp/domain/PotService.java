@@ -68,6 +68,7 @@ public class PotService {
 
     public void setPotentieleMatches(Queue<User> potentieleMatches) {
         this.potentieleMatches = potentieleMatches;
+        this.findPotentieleMatches();
     }
 
     public ArrayList<User> getPending() {
@@ -84,7 +85,6 @@ public class PotService {
 
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
-        this.findPotentieleMatches();
     }
 
 
