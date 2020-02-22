@@ -151,7 +151,7 @@ public abstract class User {
 
 
         for (int i = 0; i < listOfFiles.length; i++) {
-            if (listOfFiles[i].isFile()) {
+            if (listOfFiles[i].isFile() && !listOfFiles[i].getName().substring(listOfFiles[i].getName().length()-3).equals("txt")) {
                 System.out.println("File " + listOfFiles[i].getName());
                 photoPaths.add("users/" + this.getEmail() + "/" + listOfFiles[i].getName());
             }

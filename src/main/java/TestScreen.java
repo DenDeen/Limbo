@@ -13,7 +13,9 @@ public class TestScreen {
 
         System.out.println(user1.getPhotoPaths());
 
-        System.out.println(user1.getPotService().getPotentieleMatchesScore());
+        System.out.println(user1.getPotService().getPotentieleMatches());
+
+        /*System.out.println(user1.getPotService().getPotentieleMatchesScore());
         System.out.println(Facade.peekFirstPotential("ericbeast@yahoo.com")[1]);
         System.out.println(Facade.peekSecondPotential("ericbeast@yahoo.com")[1]);
         Facade.swipe("ericbeast@yahoo.com",1);
@@ -33,7 +35,7 @@ public class TestScreen {
         user2.getPotService().swipeRight();
         System.out.println("nu zou eric en jane hun matches 1 lang moeten zijn");
         System.out.println("-> " + user1.getMatchService().getMatches().size());
-        System.out.println("-> " + user2.getMatchService().getMatches().size());
+        System.out.println("-> " + user2.getMatchService().getMatches().size());*/
 
         /*System.out.println(user1.getPotService().getPotentieleMatches());
         System.out.println("eerste potentie van eric: " + user1.getPotService().getPotentieleMatches().peek());
