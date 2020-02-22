@@ -19,7 +19,7 @@ public class PotService {
     }
 
     public void addPotentieel(User user){
-
+        potentieleMatches.add(user);
     }
 
     public void swipeLeft(){
@@ -33,13 +33,14 @@ public class PotService {
     public void swipeRight(){
         int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
-        if(lovedOne.getPotService().getPending().contains(this))
+        ArrayList<User> dummy = lovedOne.getPotService().getPending();
+        if(dummy.contains(this))
         {
             lovedOne.getMatchService().addMatch(currentUser);
             currentUser.getMatchService().addMatch(lovedOne);
         }
         else {
-            pending.add(potentieleMatches.poll());
+            pending.add(lovedOne);
         }
     }
 

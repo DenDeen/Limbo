@@ -36,15 +36,7 @@ public abstract class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return  woman == user.woman &&
-                Objects.equals(mainPhotoPath, user.mainPhotoPath) &&
-                Objects.equals(photoPaths, user.photoPaths) &&
-                name.equals(user.name) &&
-                firstName.equals(user.firstName) &&
-                email.equals(user.email) &&
-                Objects.equals(potService, user.potService) &&
-                Objects.equals(matchService, user.matchService) &&
-                Objects.equals(users, user.users);
+        return email.equals(user.email);
     }
 
     @Override

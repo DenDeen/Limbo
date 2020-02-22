@@ -21,6 +21,8 @@ public class TestScreen {
         MatchService matchService1 = new MatchService();
         matchService1.setCurrentuser(user1);
         user1.setPotService(potService1);
+        users.addPerson(user1);
+        user1.setUsers(users);
 
         user2.setName("plane");
         user2.setFirstName("jane");
@@ -33,9 +35,16 @@ public class TestScreen {
         MatchService matchService2 = new MatchService();
         matchService2.setCurrentuser(user2);
         user2.setPotService(potService2);
+        users.addPerson(user2);
+        user2.setUsers(users);
+
         System.out.println("eric swiped jane naar rechts");
         user1.getPotService().swipeRight();
         System.out.println("nu zou jane in pending van eric zitten");
-        System.out.println("-> "+user1.getPotService().getPotentieleMatches().peek().getFirstName());
+        System.out.println("-> "+user1.getPotService().getPending().get(0).getFirstName());
+        System.out.println("eric swiped jane naar rechts");
+        user2.getPotService().swipeRight();
+        System.out.println("nu zou jane en eric match zijn");
+        System.out.println("-> " + user1.getMatchService().getMatches().get(0));
     }
 }
