@@ -60,7 +60,7 @@ public class PotService {
     }
 
     public User swipeRight(){
-        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.remove());
+        int posOfLovedONe = currentUser.getUsers().getPersons().indexOf(potentieleMatches.poll());
         User lovedOne = currentUser.getUsers().getPersons().get(posOfLovedONe);
         ArrayList<User> dummy = lovedOne.getPotService().getPending();
         if(dummy.contains(currentUser))

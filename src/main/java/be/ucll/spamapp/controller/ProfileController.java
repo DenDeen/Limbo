@@ -17,7 +17,7 @@ public class ProfileController {
     @GetMapping("/profile")
     public String load(Model model, @RequestParam("user") String email) {
         User user = Facade.getUser(email);
-        System.out.println(user.getEmail());
+
 
         model.addAttribute("profile", user);
         return "profile";

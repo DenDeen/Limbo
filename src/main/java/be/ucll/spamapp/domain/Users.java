@@ -66,6 +66,9 @@ public class Users {
         user1.setMatchService(matchService1);
         users.add(user1);
         user1.setUsers(this);
+        user1.setLength(175);
+        user1.setAge(34);
+        user1.setOrientation('m');
 
         user2.setName("plane");
         user2.setFirstName("jane");
@@ -82,6 +85,10 @@ public class Users {
         user2.setMatchService(matchService2);
         users.add(user2);
         user2.setUsers(this);
+        user2.setLength(175);
+        user2.setAge(34);
+        user2.setOrientation('m');
+
 
         user3.setName("doe");
         user3.setFirstName("john");
@@ -98,6 +105,9 @@ public class Users {
         user3.setMatchService(matchService3);
         users.add(user3);
         user3.setUsers(this);
+        user3.setLength(175);
+        user3.setAge(34);
+        user3.setOrientation('m');
 
         user4.setName("flint");
         user4.setFirstName("rachel");
@@ -115,6 +125,9 @@ public class Users {
         user4.setMatchService(matchService4);
         users.add(user4);
         user4.setUsers(this);
+        user4.setLength(175);
+        user4.setAge(34);
+        user4.setOrientation('m');
 
         user5.setName("Advertisement");
         user5.setFirstName("Advertisement");
@@ -132,6 +145,9 @@ public class Users {
         user5.setMatchService(matchService5);
         users.add(user5);
         user5.setUsers(this);
+        user5.setLength(175);
+        user5.setAge(34);
+        user5.setOrientation('m');
 
         user6.setName("Dec");
         user6.setFirstName("Jonas");
@@ -148,6 +164,9 @@ public class Users {
         user6.setMatchService(matchService6);
         users.add(user6);
         user6.setUsers(this);
+        user6.setLength(175);
+        user6.setAge(34);
+        user6.setOrientation('m');
 
         user7.setName("Ghi");
         user7.setFirstName("Martijn");
@@ -164,6 +183,9 @@ public class Users {
         user7.setMatchService(matchService7);
         users.add(user7);
         user7.setUsers(this);
+        user7.setLength(175);
+        user7.setAge(34);
+        user7.setOrientation('m');
 
         user8.setName("Abc");
         user8.setFirstName("Quentin");
@@ -181,6 +203,9 @@ public class Users {
         user8.setMatchService(matchService8);
         users.add(user8);
         user8.setUsers(this);
+        user8.setLength(175);
+        user8.setAge(34);
+        user8.setOrientation('m');
 
         user9.setName("Jkl");
         user9.setFirstName("Mikkel");
@@ -198,6 +223,9 @@ public class Users {
         user9.setMatchService(matchService9);
         users.add(user9);
         user9.setUsers(this);
+        user9.setLength(175);
+        user9.setAge(34);
+        user9.setOrientation('m');
 
         user10.setName("add");
         user10.setFirstName("add");
@@ -214,6 +242,9 @@ public class Users {
         user10.setMatchService(matchService10);
         users.add(user10);
         user10.setUsers(this);
+        user10.setLength(175);
+        user10.setAge(34);
+        user10.setOrientation('m');
 
         user11.setName("Marascalco");
         user11.setFirstName("Ariel");
@@ -230,6 +261,9 @@ public class Users {
         user11.setMatchService(matchService11);
         users.add(user11);
         user11.setUsers(this);
+        user11.setLength(175);
+        user11.setAge(34);
+        user11.setOrientation('m');
 
         user12.setName("Hosch");
         user12.setFirstName("Matthew");
@@ -247,6 +281,9 @@ public class Users {
         user12.setMatchService(matchService12);
         users.add(user12);
         user12.setUsers(this);
+        user12.setLength(175);
+        user12.setAge(34);
+        user12.setOrientation('m');
 
         user13.setName("JefCoat");
         user13.setFirstName("Sunni");
@@ -264,6 +301,9 @@ public class Users {
         user13.setMatchService(matchService13);
         users.add(user13);
         user13.setUsers(this);
+        user13.setLength(175);
+        user13.setAge(34);
+        user13.setOrientation('m');
 
         user14.setName("Emerald");
         user14.setFirstName("Kelly");
@@ -280,6 +320,9 @@ public class Users {
         user14.setMatchService(matchService14);
         users.add(user14);
         user14.setUsers(this);
+        user14.setLength(175);
+        user14.setAge(34);
+        user14.setOrientation('m');
 
         user15.setName("add");
         user15.setFirstName("add");
@@ -296,6 +339,9 @@ public class Users {
         user15.setMatchService(matchService15);
         users.add(user15);
         user15.setUsers(this);
+        user15.setLength(175);
+        user15.setAge(34);
+        user15.setOrientation('m');
 
         user16.setName("Decamp");
         user16.setFirstName("Leda");
@@ -313,6 +359,9 @@ public class Users {
         user16.setMatchService(matchService16);
         users.add(user16);
         user16.setUsers(this);
+        user16.setLength(175);
+        user16.setAge(34);
+        user16.setOrientation('m');
 
         user17.setName("Harton");
         user17.setFirstName("Weston");
@@ -330,6 +379,9 @@ public class Users {
         user17.setMatchService(matchService17);
         users.add(user17);
         user17.setUsers(this);
+        user17.setLength(175);
+        user17.setAge(34);
+        user17.setOrientation('m');
 
         user18.setName("Couvilier");
         user18.setFirstName("Amber");
@@ -346,6 +398,9 @@ public class Users {
         user18.setMatchService(matchService18);
         users.add(user18);
         user18.setUsers(this);
+        user18.setLength(175);
+        user18.setAge(34);
+        user18.setOrientation('m');
 
         user19.setName("Donald");
         user19.setFirstName("Trump");
@@ -362,6 +417,9 @@ public class Users {
         user19.setMatchService(matchService19);
         users.add(user19);
         user19.setUsers(this);
+        user19.setLength(175);
+        user19.setAge(34);
+        user19.setOrientation('m');
 
         user20.setName("add");
         user20.setFirstName("add");
@@ -379,6 +437,9 @@ public class Users {
         user20.setMatchService(matchService20);
         users.add(user20);
         user20.setUsers(this);
+        user20.setLength(175);
+        user20.setAge(34);
+        user20.setOrientation('m');
 
         potService1.addPotentieel(user3);
         potService1.addPotentieel(user4);
@@ -405,9 +466,10 @@ public class Users {
     }
 
     public User getUser(String email) {
+        System.out.println(email);
         for (User u: users
              ) {
-            if (u.getEmail() == email){
+            if (u.getEmail().equals(email)){
                 return u;
             }
         }
