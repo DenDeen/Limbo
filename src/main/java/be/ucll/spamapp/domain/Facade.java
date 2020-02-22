@@ -14,7 +14,18 @@ public class Facade {
     public Facade() {
     }
 
-
+    public static User peekSecondPotential(String email)
+    {
+        for(User dum:allUsers.getPersons())
+        {
+            if(dum.getEmail().equals(email))
+            {
+                ArrayList<User>dumdum = new ArrayList<>(dum.getPotService().getPotentieleMatches());
+                return dumdum.get(1);
+            }
+        }
+        return null;
+    }
 
     public static User swipe(String email, int keuze)
     {
