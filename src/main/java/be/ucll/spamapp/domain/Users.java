@@ -2,6 +2,7 @@ package be.ucll.spamapp.domain;
 
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 @Service
 public class Users {
@@ -11,7 +12,67 @@ public class Users {
 
 
     private Users(){
+        User user1 = new Zombie();
+        User user2 = new Human();
+        User user3 = new Human();
+        User user4 = new Zombie();
+        user1.setName("beast");
+        user1.setFirstName("eric");
+        user1.setAge(26);
+        user1.setWoman(false);
+        user1.setEmail("ericbeast@yahoo.com");
+        ((Zombie) user1).setDate(LocalDate.now());
+        PotService potService1 = new PotService();
+        potService1.setCurrentUser(user1);
+        potService1.addPotentieel(user2);
+        MatchService matchService1 = new MatchService();
+        matchService1.setCurrentuser(user1);
+        user1.setPotService(potService1);
+        users.add(user1);
+        user1.setUsers(this);
 
+        user2.setName("plane");
+        user2.setFirstName("jane");
+        user2.setAge(22);
+        user2.setWoman(true);
+        user2.setEmail("janeplane@gmail.com");
+        PotService potService2 = new PotService();
+        potService2.setCurrentUser(user2);
+        potService2.addPotentieel(user1);
+        MatchService matchService2 = new MatchService();
+        matchService2.setCurrentuser(user2);
+        user2.setPotService(potService2);
+        users.add(user2);
+        user2.setUsers(this);
+
+        user3.setName("doe");
+        user3.setFirstName("john");
+        user3.setAge(22);
+        user3.setWoman(true);
+        user3.setEmail("johndoe@gmail.com");
+        PotService potService3 = new PotService();
+        potService3.setCurrentUser(user3);
+        potService3.addPotentieel(user1);
+        MatchService matchService3 = new MatchService();
+        matchService3.setCurrentuser(user3);
+        user3.setPotService(potService3);
+        users.add(user3);
+        user3.setUsers(this);
+
+        user4.setName("flint");
+        user4.setFirstName("rachel");
+        user4.setAge(26);
+        user4.setWoman(false);
+        user4.setEmail("rachelflint@yahoo.com");
+        ((Zombie) user4).setDate(LocalDate.now());
+        PotService potService4 = new PotService();
+        potService4.setCurrentUser(user4);
+        potService4.addPotentieel(user3);
+        MatchService matchService4 = new MatchService();
+        matchService4.setCurrentuser(user4);
+        user4.setPotService(potService4);
+        users.add(user4);
+        user4.setUsers(this);
     }
 
     public static Users getInstance(){
