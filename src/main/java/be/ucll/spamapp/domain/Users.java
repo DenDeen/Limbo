@@ -116,11 +116,11 @@ public class Users {
         users.add(user4);
         user4.setUsers(this);
 
-        user5.setName("Add");
-        user5.setFirstName("Add");
+        user5.setName("Advertisement");
+        user5.setFirstName("Advertisement");
         user5.setGeboortedatum(LocalDate.now());
         user5.setWoman(false);
-        user5.setEmail("barcoaddvertisements@gmail.com");
+        user5.setEmail("barcoadvertisements@gmail.com");
         user5.setMainPhotoPath("users/"+user5.getEmail()+"/profile.jpg");
         ((Zombie) user5).setDate(LocalDate.now());
         PotService potService5 = new PotService();
@@ -203,7 +203,7 @@ public class Users {
         user10.setFirstName("add");
         user10.setGeboortedatum(LocalDate.now());
         user10.setWoman(true);
-        user10.setEmail("barcoaddvertisements@gmail.com");
+        user10.setEmail("barcoadvertisements@gmail.com");
         user10.setMainPhotoPath("users/"+user10.getEmail()+"/profile.jpg");
         PotService potService10 = new PotService();
         potService10.setCurrentUser(user10);
@@ -285,7 +285,7 @@ public class Users {
         user15.setFirstName("add");
         user15.setGeboortedatum(LocalDate.now());
         user15.setWoman(true);
-        user15.setEmail("barcoaddvertisements@gmail.com");
+        user15.setEmail("barcoadvertisements@gmail.com");
         user15.setMainPhotoPath("users/"+user15.getEmail()+"/profile.jpg");
         PotService potService15 = new PotService();
         potService15.setCurrentUser(user15);
@@ -367,7 +367,7 @@ public class Users {
         user20.setFirstName("add");
         user20.setGeboortedatum(LocalDate.now());
         user20.setWoman(false);
-        user20.setEmail("barcoaddvertisements@gmail.com");
+        user20.setEmail("barcoadvertisements@gmail.com");
         user20.setMainPhotoPath("users/"+user20.getEmail()+"/profile.jpg");
         ((Zombie) user20).setDate(LocalDate.now());
         PotService potService20 = new PotService();
