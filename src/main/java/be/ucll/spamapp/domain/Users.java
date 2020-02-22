@@ -81,6 +81,7 @@ public class Users {
         user4.setMatchService(matchService4);
         users.add(user4);
         user4.setUsers(this);
+
         potService1.addPotentieel(user3);
         potService1.addPotentieel(user4);
     }
@@ -104,6 +105,18 @@ public class Users {
     public User removeNextPerson(User person){
         return users.remove(0);
     }
+
+    public User getUser(String email) {
+        for (User u: users
+             ) {
+            if (u.getEmail() == email){
+                return u;
+            }
+        }
+
+        throw new DomainException("user bestaat niet");
+    }
+
 
 
 }
