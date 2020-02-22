@@ -70,6 +70,7 @@ public class Users {
         user1.setLength(175);
         user1.setAge(34);
         user1.setOrientation('m');
+        user1.setBio("Undead but hopefully not unloved");
 
         user2.setName("Plane");
         user2.setFirstName("Jane");
@@ -89,6 +90,8 @@ public class Users {
         user2.setLength(175);
         user2.setAge(20);
         user2.setOrientation('m');
+        user2.setBio("Undead but hopefully not unloved");
+
 
 
         user3.setName("Doe");
@@ -109,6 +112,8 @@ public class Users {
         user3.setLength(175);
         user3.setAge(18);
         user3.setOrientation('m');
+        user3.setBio("Undead but hopefully not unloved");
+
 
         user4.setName("Flint");
         user4.setFirstName("Rachel");
@@ -129,6 +134,8 @@ public class Users {
         user4.setLength(175);
         user4.setAge(19);
         user4.setOrientation('m');
+        user4.setBio("Undead but hopefully not unloved");
+
 
         user5.setName("Advertisement");
         user5.setFirstName("Advertisement");
@@ -149,6 +156,8 @@ public class Users {
         user5.setLength(175);
         user5.setAge(0);
         user5.setOrientation('m');
+        user5.setBio("Undead but hopefully not unloved");
+
 
         user6.setName("Dec");
         user6.setFirstName("Jonas");
@@ -168,6 +177,8 @@ public class Users {
         user6.setLength(175);
         user6.setAge(44);
         user6.setOrientation('m');
+        user6.setBio("Undead but hopefully not unloved");
+
 
         user7.setName("Ghi");
         user7.setFirstName("Martijn");
@@ -187,6 +198,8 @@ public class Users {
         user7.setLength(175);
         user7.setAge(21);
         user7.setOrientation('m');
+        user7.setBio("Undead but hopefully not unloved");
+
 
         user8.setName("Abc");
         user8.setFirstName("Quentin");
@@ -207,6 +220,8 @@ public class Users {
         user8.setLength(175);
         user8.setAge(66);
         user8.setOrientation('m');
+        user8.setBio("Undead but hopefully not unloved");
+
 
         user9.setName("Jkl");
         user9.setFirstName("Mikkel");
@@ -227,6 +242,8 @@ public class Users {
         user9.setLength(175);
         user9.setAge(77);
         user9.setOrientation('m');
+        user9.setBio("Undead but hopefully not unloved");
+
 
         user10.setName("Advertisements");
         user10.setFirstName("Advertisements");
@@ -246,6 +263,8 @@ public class Users {
         user10.setLength(175);
         user10.setAge(0);
         user10.setOrientation('m');
+        user10.setBio("Undead but hopefully not unloved");
+
 
         user11.setName("Marascalco");
         user11.setFirstName("Ariel");
@@ -265,6 +284,8 @@ public class Users {
         user11.setLength(175);
         user11.setAge(30);
         user11.setOrientation('m');
+        user11.setBio("Undead but hopefully not unloved");
+
 
         user12.setName("Hosch");
         user12.setFirstName("Matthew");
@@ -285,6 +306,8 @@ public class Users {
         user12.setLength(175);
         user12.setAge(25);
         user12.setOrientation('m');
+        user12.setBio("Undead but hopefully not unloved");
+
 
         user13.setName("JefCoat");
         user13.setFirstName("Sunni");
@@ -305,6 +328,8 @@ public class Users {
         user13.setLength(175);
         user13.setAge(29);
         user13.setOrientation('m');
+        user13.setBio("Undead but hopefully not unloved");
+
 
         user14.setName("Emerald");
         user14.setFirstName("Kelly");
@@ -324,6 +349,8 @@ public class Users {
         user14.setLength(175);
         user14.setAge(59);
         user14.setOrientation('m');
+        user14.setBio("Undead but hopefully not unloved");
+
 
         user15.setName("Advertisements");
         user15.setFirstName("Advertisements");
@@ -343,6 +370,8 @@ public class Users {
         user15.setLength(175);
         user15.setAge(0);
         user15.setOrientation('m');
+        user15.setBio("Undead but hopefully not unloved");
+
 
         user16.setName("Decamp");
         user16.setFirstName("Leda");

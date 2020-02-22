@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .mySlides {display:none;}
+    </style>
 </head>
 <body>
-<tr >
-    <td th:text="${profile.firstName}">1</td>
-    <td th:text="${profile.name}"></td>
-    <td th:text="${profile.bio}"></td>
-    <td th:text="${profile.mainPhotoPath}"></td>
-    <td th:text="${profile.email}"></td>
-    <td th:text="${profile.woman}"></td>
-    <td th:text="${profile.age}"></td>
-    <td th:text="${profile.Length}"></td>
-    <td th:text="${profile.Orientation}"></td>
 
-</tr>
+
+    <div class="username-box">
+            <h1 th:text="${profile.firstName}"></h1>
+            <h1 style="margin-right: 2px">,</h1>
+            <h1 th:text="${profile.name}"></h1>
+    </div>
+
+    <h3>bio:</h3>
+    <br>
+    <p th:text="${profile.bio}"></p>
+    <p th:text="${profile.mainPhotoPath}"></p>
+    <p th:text="${profile.email}"></p>
+    <p th:text="${profile.woman}"></p>
+    <p th:text="${profile.age}"></p>
+    <p th:text="${profile.Length}"></p>
+    <p th:text="${profile.Orientation}"></p>
+
+
 </body>
 </html>
