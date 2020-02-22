@@ -58,7 +58,6 @@
 <div id="board">
 
 </div>
-<div class="username-box"> <a th:href="@{/profile(user=${user.email})}">more info...</a></div>
 <div class="username-box">
     <p th:text="${score}"></p>
     <p>%</p>
@@ -145,6 +144,9 @@
                 this.topCard.style.transform =
                     'translateX(-50%) translateY(-50%) rotate(0deg) rotateY(0deg) scale(1)'
             }, 100)
+
+            var path = "[[${user.email}]]"
+            window.open("/profile?user="+path)
 
         }
 
