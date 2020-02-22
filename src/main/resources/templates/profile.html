@@ -5,66 +5,13 @@
     <title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
     <style>
         .mySlides {display:none;}
     </style>
-=======
->>>>>>> 132fb02a4e20983a8f120616ddbb03a8353c370d
 </head>
 
 <body>
-<<<<<<< HEAD
 
-
-    <div class="username-box">
-            <h1 th:text="${profile.firstName}"></h1>
-            <h1 style="margin-right: 2px">,</h1>
-            <h1 th:text="${profile.name}"></h1>
-    </div>
-
-    <h3>bio:</h3>
-    <br>
-    <p th:text="${profile.bio}"></p>
-    <p th:text="${profile.mainPhotoPath}"></p>
-    <p th:text="${profile.email}"></p>
-    <p th:text="${profile.woman}"></p>
-    <p th:text="${profile.age}"></p>
-    <p th:text="${profile.Length}"></p>
-    <p th:text="${profile.Orientation}"></p>
-
-
-    <div class="w3-content w3-display-container" >
-        <div th:each="imagepath : ${profile.photoPaths}">
-            <img class="mySlides" th:src="${imagepath}" style="width:100%">
-        </div>
-
-
-
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-        }
-    </script>
-=======
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="/homepage">
         <img class="logo" src="zombie.png" alt="ucll">
@@ -96,15 +43,6 @@
 
     </div>
 </nav>
-    <!--<td th:text="${profile.firstName}">1</td>
-    <td th:text="${profile.name}"></td>
-    <td th:text="${profile.bio}"></td>
-    <td th:text="${profile.mainPhotoPath}"></td>
-    <td th:text="${profile.email}"></td>
-    <td th:text="${profile.woman}"></td>
-    <td th:text="${profile.age}"></td>
-    <td th:text="${profile.Length}"></td>
-    <td th:text="${profile.Orientation}"></td>-->
 
     <table class="table match-table">
         <tr>
@@ -129,6 +67,36 @@
         </tr>
     </table>
 
->>>>>>> 132fb02a4e20983a8f120616ddbb03a8353c370d
+<div class="w3-content w3-display-container" >
+    <div th:each="imagepath : ${profile.photoPaths}">
+        <img class="mySlides" th:src="${imagepath}" style="width:100%">
+    </div>
+
+
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+
 </body>
 </html>
