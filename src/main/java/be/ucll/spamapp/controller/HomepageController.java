@@ -16,8 +16,6 @@ import java.util.stream.Collectors;
 @Controller
 public class HomepageController {
 
-    @Autowired
-    Users users;
 
     public HomepageController(){
 
@@ -25,7 +23,8 @@ public class HomepageController {
 
     @GetMapping("/homepage")
     public String load(Model model, @CookieValue(value = "email") String email) {
-        model.addAttribute("potential", users.getPersons());
+        //model.addAttribute("photopath", Facade.getPhotoPaths(email).get(0));
+        //model.addAttribute("name", Facade.getPotentiele(email).get(0));
         System.out.println(email);
         model.addAttribute("email", email);
         return "homepage";
@@ -33,7 +32,7 @@ public class HomepageController {
 
     @GetMapping("/newcard")
     public String newCard(Model model){
-        model.addAttribute("potential", users.getPersons());
+        //model.addAttribute("potential", users.getPersons());
         return "homepage";
     }
 
