@@ -47,13 +47,16 @@
     <td th:text="${t.email}"></td>
     <td th:text="${t.password}"></td>
 </tr>-->
-<div class="username-box">
-    <p th:text="${user.name}"></p>
-</div>
+
 
 <div id="board">
-
+    <div class="username-box">
+        <p th:text="${user.firstName}"></p>
+    </div>
 </div>
+<div class="username-box"> <a th:href="@{/profile(user=${user.email})}">more info...</a></div>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 <script>

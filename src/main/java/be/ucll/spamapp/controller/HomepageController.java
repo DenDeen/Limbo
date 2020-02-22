@@ -23,11 +23,16 @@ public class HomepageController {
 
     @GetMapping("/homepage")
     public String load(Model model, @CookieValue(value = "email") String email) {
+        try{
         model.addAttribute("user", Facade.getPotentiele(email).get(0));
         model.addAttribute("nextUser", Facade.getPotentiele(email).get(1));
 
         model.addAttribute("email", email);
         return "homepage";
+        }
+        catch (Exception e){
+            return "geenMatches";
+        }
     }
 
     @GetMapping("/swipe")
