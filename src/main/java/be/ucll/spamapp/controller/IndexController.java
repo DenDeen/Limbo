@@ -40,5 +40,6 @@ public class IndexController {
 
         return new ModelAndView("redirect:/homepage");
     }
+
 }
 
