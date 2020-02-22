@@ -11,12 +11,12 @@ public class TestScreen {
         User user3 = users.getPersons().get(2);
         User user4 = users.getPersons().get(3);
 
-        System.out.println(user1.getPotService().getPotentieleMatchesScore());
-        System.out.println(Facade.peekFirstPotential("ericbeast@yahoo.com")[1]);
-        System.out.println(Facade.peekSecondPotential("ericbeast@yahoo.com")[1]);
+        System.out.println(user1.getPotService().getPotentieleMatches());
+        System.out.println(Facade.peekFirstPotential("ericbeast@yahoo.com")[0]);
+        System.out.println(Facade.peekSecondPotential("ericbeast@yahoo.com")[0]);
         Facade.swipe("ericbeast@yahoo.com",1);
-        System.out.println(Facade.peekFirstPotential("ericbeast@yahoo.com")[1]);
-        System.out.println(Facade.peekSecondPotential("ericbeast@yahoo.com")[1]);
+        System.out.println(Facade.peekFirstPotential("ericbeast@yahoo.com")[0]);
+        System.out.println(Facade.peekSecondPotential("ericbeast@yahoo.com")[0]);
 /*
         System.out.println("eric swiped jane naar rechts");
         user1.getPotService().swipeRight();
