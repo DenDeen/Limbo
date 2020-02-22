@@ -31,6 +31,18 @@ public abstract class User {
         setPhotoPaths(photoPaths);
     }
 
+    public User(String name, String firstName, int age){
+        setId(id);
+        setAge(age);
+        setFirstName(firstName);
+        setName(name);
+        setEmail(email);
+        setWoman(woman);
+        setMainPhotoPath(mainPhotoPath);
+        setPhotoPaths(photoPaths);
+    }
+
+
     public int getId() {
         return id;
     }
